@@ -14,7 +14,6 @@ export class RoutingQueryparamsComponent {
   id: any;
 
   search() {
-
     this.router.navigate(['/products'], {
       queryParams : {
         id : this.id,

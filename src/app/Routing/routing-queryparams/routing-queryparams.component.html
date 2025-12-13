@@ -1,2 +1,2 @@
-<input type="text" placeholder="Enter ID" [(ngModel)]="id">
+<input type="text" placeholder="Enter ID" [(ngModel)]="id" (keyup.enter)="search()">
 <button (click)="search()">Search</button>
