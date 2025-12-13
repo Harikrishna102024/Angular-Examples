@@ -1,0 +1,40 @@
+<div class="main">
+
+    <div class="card">
+
+        <div class="heading">
+            <h3>Class Binding</h3>
+        </div>
+
+        <div class="full-line"></div>
+
+        <div class="data">
+            <h6 [class.active]="status">Active calss binding</h6>
+        </div>
+        <div class="data">
+            <h6 [class.inActive]="!status">Inactive calss binding</h6>
+        </div>
+        <div class="full-line"></div>
+        <div class="data">
+            <h6 [ngClass]="{'active' : status, 'inActive' : !status}">[ngClass] using Multiple calsses binding</h6>
+        </div>
+
+        <div class="full-line"></div>
+        <div class="data">
+            <h6 [ngClass]="status ? 'inActive' : 'active' ">[ngClass] using condition based calss binding</h6>
+        </div>
+
+        <div class="full-line"></div>
+        <div class="data">
+            <h6 [ngClass]="['inActive', 'heighlet']">[ngClass] using Array with calsses binding</h6>
+        </div>
+
+        <div class="full-line"></div>
+        <div class="data">
+            <h6 [ngClass]="'active heighlet'">[ngClass] using String with calsses binding</h6>
+        </div>
+
+
+    </div>
+
+</div>

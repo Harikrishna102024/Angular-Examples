@@ -1,0 +1,18 @@
+<div class="main">
+
+    <div class="card">
+
+        <div class="heading">
+            <h3>Component Communication</h3>
+        </div>
+
+        <div class="full-line"></div>
+
+        <div class="data">
+            <app-child [data]="parentData" (childEvent)="getChildData($event)"></app-child>
+            <h5>{{childData}}</h5>
+        </div>
+
+    </div>
+
+</div>

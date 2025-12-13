@@ -1,0 +1,36 @@
+<div class="main">
+
+  <div class="card">
+
+    <div class="heading">
+      <h3>Style Binding</h3>
+    </div>
+
+    <div class="full-line"></div>
+
+    <div class="data">
+      <p [style.color]="'gray'">Normal Style Binding</p>
+    </div>
+
+    <div class="full-line"></div>
+
+    <div class="data">
+      <p [ngStyle]="{ 'color': textColor, 'font-size': fontSize }">[ngstyle] using multiple Style Binding</p>
+    </div>
+
+    <div class="full-line"></div>
+
+     <div class="data">
+      <p [ngStyle]="{'color' : status ? textColor : color}">[ngstyle] using multiple Style Binding</p>
+    </div>
+
+    <div class="full-line"></div>
+
+    <div class="data">
+      <p [style]="myStyles">[ngstyle] using multiple Style Binding</p>
+    </div>
+
+
+  </div>
+
+</div>

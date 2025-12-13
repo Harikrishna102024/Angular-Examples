@@ -1,0 +1,25 @@
+<div class="main">
+
+    <div class="card">
+
+        <div class="heading">
+            <h3>Template Refrence</h3>
+        </div>
+
+        <div class="full-line"></div>
+
+        <div class="data">
+            <input #box type="text" placeholder="Write something" (input)="0">
+            <p>You typed: {{ box.value }}</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--
+(input)="0" means it will trigger the UI change detection of a input box.
+
+-->

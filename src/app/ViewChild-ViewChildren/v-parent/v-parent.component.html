@@ -1,0 +1,31 @@
+<div class="main">
+
+  <div class="card">
+
+    <div class="heading">
+      <h3 #myHeading>ViewChild & ViewChildren</h3>
+    </div>
+
+    <div class="full-line"></div>
+
+    <div class="data">
+
+      <app-v-child style="display: none;"></app-v-child>
+
+      <button type="button" class="btn btn-primary" (click)="displayMsg()">Click</button>
+      <h6>{{msg}}</h6>
+      <h6>{{idAccess}}</h6>
+
+      <hr>
+
+      <p #para>Paragraph 1</p>
+      <p #para>Paragraph 2</p>
+      <p #para>Paragraph 3</p>
+
+      <button (click)="highlight()">Highlight All</button>
+
+    </div>
+
+  </div>
+
+</div>

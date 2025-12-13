@@ -1,0 +1,21 @@
+<div class="main">
+
+  <div class="card">
+
+    <div class="heading">
+      <h3>ngDoCheck()</h3>
+    </div>
+
+    <div class="full-line"></div>
+
+    <div class="data">
+      <input type="text" [(ngModel)]="newItem">
+      <ng-container *ngFor="let d of data">
+        <h5>{{d}}</h5>
+      </ng-container>
+      <button class="btn btn-primary" (click)="addItem()">Click</button>
+    </div>
+
+  </div>
+
+</div>

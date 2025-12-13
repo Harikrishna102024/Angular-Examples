@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,52 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular';
+
+    name: any = "Krishna"
+
+    data: any = "Angular"
+
+    value: any;
+
+    change() {
+      this.value = "HARIKRISHNA"
+    }
+
+
+  // constructor() {
+  //   console.log("constructor");
+  // }
+
+  // ngOnChanges(changes: SimpleChanges) {
+  //   console.log("ngOnChanges");
+  // }
+
+  // ngOnInit() {
+  //   console.log("ngOnInit");
+  // }
+  // ngAfterViewInit() {
+  //   console.log("ngAfterViewInit");
+  // }
+
+  // ngAfterViewChecked() {
+  //   console.log("ngAfterViewChecked");
+  // }
+
+
+  // ngDoCheck() {
+  //   console.log("ngDoCheck");
+  // }
+
+  // ngAfterContentInit() {
+  //   console.log("ngAfterContentInit");
+  // }
+
+  // ngAfterContentChecked() {
+  //   console.log("ngAfterContentChecked");
+  // }
+
+  
+  // ngOnDestroy() {
+  //   console.log("ngOnDestroy");
+  // }
 }
