@@ -7,20 +7,29 @@ import { RoutingAdminComponent } from './Routing/routing-admin/routing-admin.com
 import { RoutingUsersComponent } from './Routing/routing-users/routing-users.component';
 import { RoutParametersComponent } from './Routing/rout-parameters/rout-parameters.component';
 import { RoutingQueryparamsComponent } from './Routing/routing-queryparams/routing-queryparams.component';
+import { RegisterComponent } from './Routing/register/register.component';
+import { AuthGuardService } from './Services/auth-guard.service';
+import { LoginComponent } from './Routing/login/login.component';
 
 const routes: Routes = [
 
   {
-    path: '', redirectTo: 'demo', pathMatch: 'full' 
+    path: '', redirectTo: 'demo', pathMatch: 'full'
   },
-  { 
-    path: 'demo', component: RoutingDemoComponent 
+  {
+    path: 'demo', component: RoutingDemoComponent
   },
-  { 
+  {
     path: 'home', component: RoutingHomeComponent
   },
   {
     path: 'course', component: RoutingCourceComponent
+  },
+  {
+    path: 'login', component: LoginComponent, canActivate: [AuthGuardService]
+  },
+  {
+    path: 'register', component: RegisterComponent
   },
   {
     path: 'adm',

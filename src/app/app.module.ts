@@ -38,6 +38,8 @@ import { RoutingUsersComponent } from './Routing/routing-users/routing-users.com
 import { RoutParametersComponent } from './Routing/rout-parameters/rout-parameters.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RoutingQueryparamsComponent } from './Routing/routing-queryparams/routing-queryparams.component';
+import { LoginComponent } from './Routing/login/login.component';
+import { RegisterComponent } from './Routing/register/register.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +77,8 @@ import { RoutingQueryparamsComponent } from './Routing/routing-queryparams/routi
     RoutingUsersComponent,
     RoutParametersComponent,
     RoutingQueryparamsComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

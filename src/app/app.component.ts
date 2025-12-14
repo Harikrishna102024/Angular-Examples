@@ -1,4 +1,5 @@
 import { Component, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +8,21 @@ import { Component, SimpleChanges } from '@angular/core';
 })
 export class AppComponent {
 
-    name: any = "Krishna"
+  constructor(private router: Router){}
 
-    data: any = "Angular"
+  name: any = "Krishna"
 
-    value: any;
+  data: any = "Angular"
 
-    change() {
-      this.value = "HARIKRISHNA"
-    }
+  value: any;
+
+  ngOnInit() {
+    this.router.navigate(['/demo']);
+  }
+
+  change() {
+    this.value = "HARIKRISHNA"
+  }
 
 
   // constructor() {
@@ -50,7 +57,7 @@ export class AppComponent {
   //   console.log("ngAfterContentChecked");
   // }
 
-  
+
   // ngOnDestroy() {
   //   console.log("ngOnDestroy");
   // }
