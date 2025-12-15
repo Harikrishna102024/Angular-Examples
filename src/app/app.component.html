@@ -91,7 +91,11 @@
                 </div>
                 <div class="data" style="display: flex; justify-content: space-evenly;">
                     <a routerLink="/login">LogIn</a>
-                    <a routerLink="/register">Register</a>
+                    <a routerLink="/register" (click)="hide()" *ngIf="isHide">Register</a>
+                    <a routerLink="/logout" (click)="hide()">logout</a>
+                </div>
+                <div class="data" style="display: flex; justify-content: space-evenly;">
+                    <button class="btn btn-primary" routerLink="/admin">Load Module</button>
                 </div>
 
             </div>

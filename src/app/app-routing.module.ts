@@ -10,6 +10,7 @@ import { RoutingQueryparamsComponent } from './Routing/routing-queryparams/routi
 import { RegisterComponent } from './Routing/register/register.component';
 import { AuthGuardService } from './Services/auth-guard.service';
 import { LoginComponent } from './Routing/login/login.component';
+import { LogOutComponent } from './Routing/log-out/log-out.component';
 
 const routes: Routes = [
 
@@ -26,10 +27,17 @@ const routes: Routes = [
     path: 'course', component: RoutingCourceComponent
   },
   {
-    path: 'login', component: LoginComponent, canActivate: [AuthGuardService]
+    path: 'login', component: LoginComponent, canActivate: [AuthGuardService], canDeactivate: [AuthGuardService]
   },
   {
-    path: 'register', component: RegisterComponent
+    path: 'register', component: RegisterComponent,
+  },
+  {
+    path: 'logout', component: LogOutComponent,
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./Routing/admin/admin.module').then(m => m.AdminModule), canLoad: [AuthGuardService]
   },
   {
     path: 'adm',

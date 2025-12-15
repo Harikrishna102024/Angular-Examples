@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AuthGuardService } from '../../Services/auth-guard.service';
 
 @Component({
@@ -17,5 +17,7 @@ export class RegisterComponent {
   register() {
     this.authService.isRegistered = true;
   }
+
+ 
 
 }

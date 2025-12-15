@@ -16,12 +16,18 @@ export class AppComponent {
 
   value: any;
 
+  isHide = true;
+
   ngOnInit() {
     this.router.navigate(['/demo']);
   }
 
   change() {
     this.value = "HARIKRISHNA"
+  }
+
+  hide() {
+    this.isHide = !this.isHide;
   }
 
 

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OneWayComponent } from './Data Binding/one-way/one-way.component';
@@ -40,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RoutingQueryparamsComponent } from './Routing/routing-queryparams/routing-queryparams.component';
 import { LoginComponent } from './Routing/login/login.component';
 import { RegisterComponent } from './Routing/register/register.component';
+import { LogOutComponent } from './Routing/log-out/log-out.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +79,7 @@ import { RegisterComponent } from './Routing/register/register.component';
     RoutingQueryparamsComponent,
     LoginComponent,
     RegisterComponent,
+    LogOutComponent,
   ],
   imports: [
     BrowserModule,
