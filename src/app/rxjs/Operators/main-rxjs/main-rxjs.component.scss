@@ -1,0 +1,23 @@
+.main {
+  display: ruby;
+
+  .card {
+    height: 24vh;
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 7px;
+
+      .content {
+        margin-top: auto;
+
+        .sub-content {
+          max-height: 11vh;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,6 @@ import { LoginComponent } from './Routing/login/login.component';
 import { LogOutComponent } from './Routing/log-out/log-out.component';
 
 const routes: Routes = [
-
   {
     path: '', redirectTo: 'demo', pathMatch: 'full'
   },
@@ -21,13 +20,13 @@ const routes: Routes = [
     path: 'demo', component: RoutingDemoComponent
   },
   {
-    path: 'home', component: RoutingHomeComponent
+    path: 'home', component: RoutingHomeComponent, data: { title: 'Home Page' }
   },
   {
     path: 'course', component: RoutingCourceComponent
   },
   {
-    path: 'login', component: LoginComponent, canActivate: [AuthGuardService], canDeactivate: [AuthGuardService]
+    path: 'login', component: LoginComponent, canActivate: [AuthGuardService], canDeactivate: [AuthGuardService], 
   },
   {
     path: 'register', component: RegisterComponent,

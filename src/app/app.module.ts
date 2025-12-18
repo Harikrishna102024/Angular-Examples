@@ -40,6 +40,14 @@ import { RoutingQueryparamsComponent } from './Routing/routing-queryparams/routi
 import { LoginComponent } from './Routing/login/login.component';
 import { RegisterComponent } from './Routing/register/register.component';
 import { LogOutComponent } from './Routing/log-out/log-out.component';
+import { ObservablesComponent } from './rxjs/observables/observables.component';
+import { SubscriberOneComponent } from './rxjs/Subject/subscriber-one/subscriber-one.component';
+import { SubscriberTwoComponent } from './rxjs/Subject/subscriber-two/subscriber-two.component';
+import { SubscriberThreeComponent } from './rxjs/Subject/subscriber-three/subscriber-three.component';
+import { SubscriberComponent } from './rxjs/Subject/subscriber/subscriber.component';
+import { SimpleSubjectComponent } from './rxjs/Subject/simple-subject/simple-subject.component';
+import { BaseComponent } from './rxjs/Operators/base/base.component';
+import { MainRxjsComponent } from './rxjs/Operators/main-rxjs/main-rxjs.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +88,15 @@ import { LogOutComponent } from './Routing/log-out/log-out.component';
     LoginComponent,
     RegisterComponent,
     LogOutComponent,
+    ObservablesComponent,
+    SubscriberOneComponent,
+    SubscriberTwoComponent,
+    SubscriberThreeComponent,
+    SubscriberComponent,
+    SimpleSubjectComponent,
+    BaseComponent,
+    MainRxjsComponent,
+
   ],
   imports: [
     BrowserModule,

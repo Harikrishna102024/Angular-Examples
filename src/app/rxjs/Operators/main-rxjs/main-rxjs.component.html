@@ -1,0 +1,235 @@
+<div class="main">
+
+  <div class="card col-3">
+    <div class="card-body">
+      <h5 class="card-title">Pipe()</h5>
+      <hr>
+      <button class="btn btn-primary" (click)="getPipeData()">Pipe</button>
+      <div class="content">
+        <div class="sub-content">
+          <ng-content *ngFor="let data of pipe">
+            <h4>{{data.price}}</h4>
+          </ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card col-3">
+    <div class="card-body">
+      <h5 class="card-title">Map()</h5>
+      <hr>
+      <button class="btn btn-primary" (click)="getMapData()">Map</button>
+      <div class="content">
+        <div class="sub-content">
+          <ng-content *ngFor="let data of map">
+            <h4>{{data.price}}</h4>
+          </ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card col-3">
+    <div class="card-body">
+      <h5 class="card-title">Filter()</h5>
+      <hr>
+      <button class="btn btn-primary" (click)="getFilterData()">Filter</button>
+      <div class="content">
+        <div class="sub-content">
+          <ng-content *ngFor="let data of filter">
+            <h4>{{data.price}}</h4>
+          </ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card col-3">
+    <div class="card-body">
+      <h5 class="card-title">CatchError()</h5>
+      <hr>
+      <button class="btn btn-primary" (click)="getCatchErroData()">CatchError</button>
+      <div class="content">
+        <div class="sub-content">
+          <ng-content *ngFor="let data of catchStatus">
+            <h4>{{data}}</h4>
+          </ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-3">
+    <div class="card-body">
+      <h5 class="card-title">of()</h5>
+      <hr>
+      <button class="btn btn-primary" (click)="ofData()">Of</button>
+      <div class="content">
+        <div class="sub-content">
+          <h4>{{of}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-3">
+    <div class="card-body">
+      <h5 class="card-title">from()</h5>
+      <hr>
+      <button class="btn btn-primary" (click)="getFrom()">From</button>
+      <div class="content">
+        <div class="sub-content">
+          <h4 *ngFor="let data of from">{{data}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-3">
+    <div class="card-body">
+      <h5 class="card-title">interval()</h5>
+      <hr>
+      <button class="btn btn-primary" (click)="getInterval()">Interval</button>
+      <div class="content">
+        <div class="sub-content">
+          <h4>{{interval}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

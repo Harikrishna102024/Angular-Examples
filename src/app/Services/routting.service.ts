@@ -41,9 +41,9 @@ export class RouttingService {
 
   getProductsByQuery(ID: any) {
     var params = {
-      id : ID,
+      id: ID,
     }
-    var result = this.http.get('https://api.restful-api.dev/objects',{params});
+    var result = this.http.get('https://api.restful-api.dev/objects', { params });
     return result
   }
 
