@@ -1,0 +1,22 @@
+.main {
+    .card {
+        height: 90vh;
+
+        .form-data {
+            overflow-x: hidden;
+            .form {
+                .row {
+                    .left-items {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+            }
+            .submit {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

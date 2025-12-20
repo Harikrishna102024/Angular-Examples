@@ -48,6 +48,8 @@ import { SubscriberComponent } from './rxjs/Subject/subscriber/subscriber.compon
 import { SimpleSubjectComponent } from './rxjs/Subject/simple-subject/simple-subject.component';
 import { BaseComponent } from './rxjs/Operators/base/base.component';
 import { MainRxjsComponent } from './rxjs/Operators/main-rxjs/main-rxjs.component';
+import { TemplateDrivenFormsComponent } from './Forms/template-driven-forms/template-driven-forms.component';
+import { ReactiveFormsComponent } from './Forms/reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +98,8 @@ import { MainRxjsComponent } from './rxjs/Operators/main-rxjs/main-rxjs.componen
     SimpleSubjectComponent,
     BaseComponent,
     MainRxjsComponent,
+    TemplateDrivenFormsComponent,
+    ReactiveFormsComponent,
 
   ],
   imports: [
