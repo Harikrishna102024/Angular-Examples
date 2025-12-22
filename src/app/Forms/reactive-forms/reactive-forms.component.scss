@@ -4,6 +4,7 @@
 
         .form-data {
             overflow-x: hidden;
+
             .form {
                 .row {
                     .left-items {
@@ -13,10 +14,19 @@
                 }
 
             }
+
             .submit {
                 display: flex;
                 justify-content: center;
             }
+        }
+    }
+
+    .addressField {
+        button {
+            width: 42px;
+            margin-left: 10px;
+
         }
     }
 }

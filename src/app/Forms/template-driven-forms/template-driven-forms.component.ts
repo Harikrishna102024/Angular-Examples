@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrl: './template-driven-forms.component.scss'
 })
 export class TemplateDrivenFormsComponent {
+  userName: any;
+  password: any;
+  country: any;
+  state: any;
+  city: any;
+  village: any;
+
+
+
+  submitForm(formData: any, addr: any, un: any) {
+    console.log(formData)
+    console.log(addr)
+    console.log(un)
+
+  }
 
 }

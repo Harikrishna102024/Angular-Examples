@@ -3,115 +3,118 @@
     <div class="card">
 
         <div class="heading">
-            <h3>Template-Driven-Forms</h3>
+            <h3>Reactive-Forms</h3>
         </div>
 
         <div class="full-line"></div>
 
         <div class="form-data">
 
-            <form #myForm="ngForm" class="form" (ngSubmit)="submitForm(myForm, addr, un)">
+            <form [formGroup]="logIn" class="form" (ngSubmit)="submitForm()">
 
+                <!-- Form group -->
                 <div class="row mb-3 align-items-center">
                     <div class="col-4 left-items">
                         <label>Name <span class="required">&#42;</span></label>
                     </div>
-
                     <div class="col-8 right-items">
-                        <input 
-                        type="text" 
-                        class="form-control w-75" 
-                        name="userName" 
-                        #un="ngModel" 
-                        [(ngModel)]="userName" 
-                        pattern="^[A-Za-z ]+$" 
-                        required>
-                        <p class="error" *ngIf="un.touched && (un.errors?.['required'] || (un.value && !un.value.trim())) || (myForm.submitted && myForm.controls['userName']?.invalid) || (myForm.submitted && myForm.controls['userName']?.invalid) || (un.dirty && un.invalid)">Enter a valid name</p>
-                        <p class="error" *ngIf="un.dirty && userName && userName === userName.toLowerCase()">Uppercase Missing</p>
-                        <p class="error" *ngIf="un.dirty && userName && userName === userName.toUpperCase()">Lowercase Missing</p>                    
+                        <input type="text" class="form-control w-75" formControlName="userName">
+                        <p class="error"
+                            *ngIf="logIn.get('userName')?.hasError('required') && logIn.get('userName')?.touched">User
+                            name is required</p>
                     </div>
-
                 </div>
 
                 <div class="row mb-3 align-items-center">
                     <div class="col-4 left-items">
                         <label>Password <span class="required">&#42;</span></label>
                     </div>
-
                     <div class="col-8 right-items">
-                        <input 
-                        type="text" 
-                        class="form-control  w-75" 
-                        name="password" 
-                        #pwd="ngModel" 
-                        [(ngModel)]="password" 
-                        required 
-                        minlength="6" 
-                        maxlength="12"
-                        pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
-                        <p class="error" *ngIf="pwd.touched && (pwd.errors?.['required'] || pwd.errors?.['minlength'] || (pwd.value && !pwd.value.trim())) || (myForm.submitted && myForm.controls['password']?.invalid) || (pwd.dirty && pwd.invalid)">Give a valied password</p>
-                        <p class="error" *ngIf="(pwd.dirty || pwd.touched) && pwd.errors?.['minlength']">min length is morethan 6 need</p>
+                        <input type="text" class="form-control w-75" formControlName="password">
+                        <p class="error"
+                            *ngIf="logIn.get('password')?.hasError('required') && logIn.get('password')?.touched">
+                            Password required</p>
+                        <p class="error"
+                            *ngIf="logIn.get('password')?.hasError('required') && logIn.get('password')?.touched || logIn.get('password')?.hasError('minlength')">
+                            Password min length is 5</p>
+                        <p class="error"
+                            *ngIf="logIn.get('password')?.hasError('required') && logIn.get('password')?.touched || logIn.get('password')?.hasError('maxlength')">
+                            Password max length is 10</p>
                     </div>
-
                 </div>
 
-                <!--ngFormGroup -->
-                <div ngModelGroup="address" #addr="ngModelGroup">
-
-                    <div class="row mb-3 align-items-center">
-                        <div class="col-4 left-items">
-                            <label>Country <span class="required">&#42;</span></label>
-                        </div>
-                        <div class="col-8 right-items">
-                            <input 
-                            type="text" 
-                            class="form-control w-75" 
-                            name="country" #cn="ngModel" 
-                            [(ngModel)]="country" 
-                            required>
-                            <p class="error" *ngIf="cn.touched &&  (cn.errors?.['required'] || (cn.value && !cn.value.trim())) || (myForm.submitted && addr.control.controls['country']?.invalid)">Country is required</p>
-                        </div>
+                <div class="row mb-3 align-items-center">
+                    <div class="col-4 left-items">
+                        <label>Email <span class="required">&#42;</span></label>
                     </div>
-
-                    <div class="row mb-3 align-items-center">
-                        <div class="col-4 left-items">
-                            <label>State <span class="required">&#42;</span></label>
-                        </div>
-                        <div class="col-8 right-items">
-                            <input 
-                            type="text" 
-                            class="form-control w-75" 
-                            name="state" 
-                            #st="ngModel" 
-                            [(ngModel)]="state" 
-                            required>
-                            <p class="error" *ngIf="st.touched &&  (st.errors?.['required'] || (st.value && !st.value.trim())) || (myForm.submitted && addr.control.controls['state']?.invalid)">State is required</p>
-                        </div>
+                    <div class="col-8 right-items">
+                        <input type="text" class="form-control w-75" formControlName="email">
+                        <p class="error" *ngIf="logIn.get('email')?.hasError('pattern')">emial is wring</p>
                     </div>
-
-                    <div class="row mb-3 align-items-center">
-                        <div class="col-4 left-items">
-                            <label>City <span class="required">&#42;</span></label>
-                        </div>
-                        <div class="col-8 right-items">
-                            <input 
-                            type="text" 
-                            class="form-control w-75" 
-                            name="city" 
-                            #ct="ngModel" 
-                            [(ngModel)]="city" 
-                            required>
-                            <p class="error" *ngIf="ct.touched &&  (ct.errors?.['required'] || (ct.value && !ct.value.trim())) || (myForm.submitted && addr.control.controls['city']?.invalid)">City is required</p>
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- Form Control -->
+                <div class="row mb-3 align-items-center">
+                    <div class="col-4 left-items">
+                        <label>Phone <span class="required">&#42;</span></label>
+                    </div>
+                    <div class="col-8 right-items">
+                        <input type="text" class="form-control w-75" [formControl]="phoneNumber">
+                        <p class="error" *ngIf="phoneNumber.hasError('required') && phoneNumber.touched">Phone number is
+                            required</p>
+                    </div>
+                </div>
+
+
+                <!-- Form Array -->
+                <ng-container *ngFor="let field of address.controls; let i = index">
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-4 left-items">
+                            <label>Address{{i+1}}<span class="required">&#42;</span></label>
+                        </div>
+                        <div class="col-8 right-items">
+                            <div class="row addressField">
+                                <input type="text" [formControl]="field" class="form-control w-75"><button
+                                    class="btn btn-danger" (click)="removeField(i)"
+                                    [disabled]="address.controls.length <= 1">X</button>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
+
+                <!-- Form Builder -->
+                <div class="row mb-3 align-items-center" [formGroup]="fbuilder">
+                    <div class="col-4 left-items">
+                        <label>Contact<span class="required">&#42;</span></label>
+                    </div>
+                    <div class="col-8 right-items">
+                        <div class="row addressField">
+                            <input type="text" class="form-control w-75" formControlName="contact">
+                        </div>
+                    </div>
+                </div>
+
+                <ng-container *ngFor="let field of fbuilder.get('places')['controls']; let i = index">
+                    <div class="row mb-3 align-items-center">
+                        <div class="col-4 left-items">
+                            <label>Place<span class="required">&#42;</span></label>
+                        </div>
+                        <div class="col-8 right-items">
+                            <div class="row addressField">
+                                <input type="text" class="form-control w-75" [formControl]="field">
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+
 
                 <div class="submit">
                     <button class="btn btn-primary" type="submit">Submit</button>
+                    <button class="btn btn-success" type="submit" (click)="addAddressField()">Add Address</button>
                 </div>
-            </form>
 
+            </form>
         </div>
 
     </div>

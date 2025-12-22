@@ -6,7 +6,7 @@ import { OneWayComponent } from './Data Binding/one-way/one-way.component';
 import { TwoWayComponent } from './Data Binding/two-way/two-way.component';
 import { EventBindingComponent } from './Data Binding/event-binding/event-binding.component';
 import { PropertyBindingComponent } from './Data Binding/property-binding/property-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClassBindingComponent } from './Data Binding/class-binding/class-binding.component';
 import { StyleBindingComponent } from './Data Binding/style-binding/style-binding.component';
 import { HighlightDirective } from './Directives/highlight.directive';
@@ -106,6 +106,7 @@ import { ReactiveFormsComponent } from './Forms/reactive-forms/reactive-forms.co
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule   
   ],
   providers: [],
