@@ -1,0 +1,25 @@
+<div class="main">
+
+    <div class="card">
+
+        <div class="heading">
+            <h3>HTTP POST</h3>
+        </div>
+
+        <div class="full-line"></div>
+
+        <div class="data">
+            <form>
+                <label>Username</label>
+                <input type="text" class="form-control w-50" [(ngModel)]="userName" name="userName">
+                <label>Email</label>
+                <input type="text" class="form-control w-50" [(ngModel)]="email" name="email">
+                <label>Password</label>
+                <input type="text" class="form-control w-50" [(ngModel)]="password" name="password">
+            </form>
+            <button class="btn btn-primary" (click)="post()">Post</button>
+        </div>
+
+    </div>
+
+</div>

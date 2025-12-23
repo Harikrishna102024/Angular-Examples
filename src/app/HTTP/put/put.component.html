@@ -1,0 +1,27 @@
+<div class="main">
+
+    <div class="card">
+
+        <div class="heading">
+            <h3>HTTP PUT</h3>
+        </div>
+
+        <div class="full-line"></div>
+
+        <div class="data">
+            <form>
+                <label>User ID</label>
+                <input type="text" class="form-control w-50" [(ngModel)]="userId" name="userId">
+                <label>Username</label>
+                <input type="text" class="form-control w-50" [(ngModel)]="userName" name="userName">
+                <label>Email</label>
+                <input type="text" class="form-control w-50" [(ngModel)]="email" name="email">
+                <label>Password</label>
+                <input type="text" class="form-control w-50" [(ngModel)]="password" name="password">
+            </form>
+            <button class="btn btn-primary" (click)="put()">Put/Update</button>
+        </div>
+
+    </div>
+
+</div>

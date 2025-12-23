@@ -50,6 +50,13 @@ import { BaseComponent } from './rxjs/Operators/base/base.component';
 import { MainRxjsComponent } from './rxjs/Operators/main-rxjs/main-rxjs.component';
 import { TemplateDrivenFormsComponent } from './Forms/template-driven-forms/template-driven-forms.component';
 import { ReactiveFormsComponent } from './Forms/reactive-forms/reactive-forms.component';
+import { GetComponent } from './HTTP/get/get.component';
+import { PostComponent } from './HTTP/post/post.component';
+import { PutComponent } from './HTTP/put/put.component';
+import { PatchComponent } from './HTTP/patch/patch.component';
+import { DeleteComponent } from './HTTP/delete/delete.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -100,6 +107,11 @@ import { ReactiveFormsComponent } from './Forms/reactive-forms/reactive-forms.co
     MainRxjsComponent,
     TemplateDrivenFormsComponent,
     ReactiveFormsComponent,
+    GetComponent,
+    PostComponent,
+    PutComponent,
+    PatchComponent,
+    DeleteComponent,
 
   ],
   imports: [
@@ -107,7 +119,15 @@ import { ReactiveFormsComponent } from './Forms/reactive-forms/reactive-forms.co
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule   
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+      timeOut: 3000,
+      closeButton: true,
+      progressBar: true
+
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
