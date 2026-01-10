@@ -13,9 +13,7 @@ export class GetComponent {
 
   get() {
     this.service.getApiData().subscribe((data: any) => {
-     data.forEach((data: any) => {
-      this.userdata.push(data)
-     })
+      this.userdata = data;
     })
   }
 }

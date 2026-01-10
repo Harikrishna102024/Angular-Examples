@@ -35,7 +35,7 @@ import { RoutingCourceComponent } from './Routing/routing-cource/routing-cource.
 import { RoutingAdminComponent } from './Routing/routing-admin/routing-admin.component';
 import { RoutingUsersComponent } from './Routing/routing-users/routing-users.component';
 import { RoutParametersComponent } from './Routing/rout-parameters/rout-parameters.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { RoutingQueryparamsComponent } from './Routing/routing-queryparams/routing-queryparams.component';
 import { LoginComponent } from './Routing/login/login.component';
 import { RegisterComponent } from './Routing/register/register.component';
@@ -57,6 +57,7 @@ import { PatchComponent } from './HTTP/patch/patch.component';
 import { DeleteComponent } from './HTTP/delete/delete.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthInterceptor } from './auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -129,7 +130,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,6 +15,4 @@ export class CChildComponent  {
     this.parentData = this.data.nativeElement.textContent
   }
 
-
-
 }
