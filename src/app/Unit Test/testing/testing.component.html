@@ -1,0 +1,13 @@
+<div class="form-group">
+
+    <label>Number 1</label>
+    <input type="number" class="form-control" placeholder="Enter number 1" [(ngModel)]="num1">
+
+    <label>Number 2</label>
+    <input type="number" class="form-control" placeholder="Enter number 2" [(ngModel)]="num2">
+
+    <button class="btn btn-primary" (click)="displayResult()">Result</button>
+    <button class="btn btn-danger" (click)="remove()">Clear</button>
+
+    <div>{{result}}</div>
+</div>

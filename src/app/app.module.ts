@@ -58,6 +58,7 @@ import { DeleteComponent } from './HTTP/delete/delete.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './auth-interceptor';
+import { TestingComponent } from './Unit Test/testing/testing.component';
 
 @NgModule({
   declarations: [
@@ -113,6 +114,7 @@ import { AuthInterceptor } from './auth-interceptor';
     PutComponent,
     PatchComponent,
     DeleteComponent,
+    TestingComponent,
 
   ],
   imports: [

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpService } from '../../Services/http.service';
+import { environments } from '../../../environments/environment';
 
 @Component({
   selector: 'app-get',
@@ -8,7 +9,7 @@ import { HttpService } from '../../Services/http.service';
 })
 export class GetComponent {
   constructor(private service: HttpService){}
-
+  baseApi = environments.aiiUrl
   userdata: any[] = [];
 
   get() {
